@@ -2,6 +2,7 @@ package useCases;
 
 import org.junit.Test;
 import java.util.List;
+import modele.*;
 
 import static org.junit.Assert.assertTrue;
 
@@ -11,11 +12,12 @@ public class panierTests {
     public void testAjoutProduit() {
 
      UseCasesDuPanier sut = new UseCasesDuPanier();
-     boolean actual = sut.ajouterProduit("test", 1);
+       sut.ajouterProduit("test", 1);
 
-     assertTrue(actual);
 
-   //  List<modele.LigneDeCommande> panier = sut.GetPanier();
+     List<LigneCommande> panier = sut.GetPanier();
+
+     assertTrue(panier.size() == 1);
 
     }
 }
