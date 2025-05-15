@@ -29,7 +29,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import modele.Couleur;
-import modele.OutilsBaseDonneesTomates;
+import adaptateur.OutilsBaseDonneesTomates;
 import modele.Panier;
 import modele.Tomate;
 import modele.Tomates;

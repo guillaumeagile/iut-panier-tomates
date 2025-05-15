@@ -4,7 +4,7 @@ package tests.modele;
 import static org.junit.Assert.*;
 
 import java.util.List;
-
+import adaptateur.OutilsBaseDonneesTomates;
 import modele.*;
 import org.junit.BeforeClass;
 import org.junit.Test;

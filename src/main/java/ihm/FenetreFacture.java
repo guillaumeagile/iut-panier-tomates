@@ -26,7 +26,7 @@ import javax.swing.text.html.HTMLEditorKit;
 
 import modele.Client;
 import modele.Commande;
-import modele.OutilsBaseDonneesTomates;
+import adaptateur.OutilsBaseDonneesTomates;
 import modele.Panier;
 import modele.Tomates;
 

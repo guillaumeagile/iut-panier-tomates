@@ -2,6 +2,7 @@ package tests.modele;
 
 import static org.junit.Assert.*;
 
+import adaptateur.OutilsBaseDonneesTomates;
 import modele.*;
 import org.junit.After;
 import org.junit.Before;

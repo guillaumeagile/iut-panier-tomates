@@ -3,9 +3,8 @@ package tests.modele;
 import static org.junit.Assert.*;
 
 import modele.LigneCommande;
-import modele.OutilsBaseDonneesTomates;
-import modele.Tomate;
-import modele.Tomates;
+import adaptateur.OutilsBaseDonneesTomates;
+import modele.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

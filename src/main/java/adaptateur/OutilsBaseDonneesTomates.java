@@ -1,4 +1,4 @@
-package modele;
+package adaptateur;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import modele.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -34,7 +35,7 @@ public class OutilsBaseDonneesTomates {
      * @param cheminFichier le chemin du fichier JSON contenant les données des
      *                      tomates
      * @return une instance de Tomates représentant la base de données de
-     *         tomates
+     * tomates
      */
     public static Tomates générationBaseDeTomates(String cheminFichier) {
         List<Tomate> tomates = lectureTomatesDepuisJson(cheminFichier);
