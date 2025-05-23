@@ -1,18 +1,18 @@
 package tests.modele;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import modele.LigneCommande;
 import adaptateur.OutilsBaseDonneesTomates;
 import modele.*;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class TestLigneDeCommande {
 	
 	private static Tomates tomates;
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUp() throws Exception {
 		tomates = OutilsBaseDonneesTomates.générationBaseDeTomates("src/main/resources/data/tomates.json");
 	}

@@ -1,10 +1,12 @@
-package controleurs;
+package tests.controleurs;
 
-import org.junit.Test;
+import controleurs.ControlleurDuPanier;
+import modele.LigneCommande;
+import org.junit.jupiter.api.Test;
+
 import java.util.List;
-import modele.*;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class controleurPanierTests {
 
@@ -25,7 +27,6 @@ public class controleurPanierTests {
 
      ControlleurDuPanier sut = new ControlleurDuPanier();
        sut.ajouterProduit("test", 1);
-
 
      List<LigneCommande> panier = sut.GetPanier();
 

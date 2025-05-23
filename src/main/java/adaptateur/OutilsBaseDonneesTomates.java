@@ -15,6 +15,7 @@ import org.json.JSONObject;
  * d'une base de données de tomates à partir de fichiers JSON.
  */
 public class OutilsBaseDonneesTomates {
+    public static final String cheminFichier = "src/main/resources/data/tomates.json";
 
     /**
      * Point d'entrée principal pour exécuter les outils de base de données de
@@ -23,7 +24,7 @@ public class OutilsBaseDonneesTomates {
      * @param args les arguments de la ligne de commande
      */
     public static void main(String[] args) {
-        String cheminFichier = "src/main/resources/data/tomates.json";
+
         Tomates baseTomates = générationBaseDeTomates(cheminFichier);
         System.out.println("base créée");
         System.out.println(baseTomates);

@@ -1,25 +1,25 @@
 package tests.modele;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import adaptateur.OutilsBaseDonneesTomates;
 import modele.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TestMonPanier {
 	
 	private static Tomates tomates;
 	private Panier panier;
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUP() {
 		tomates = OutilsBaseDonneesTomates.générationBaseDeTomates("src/main/resources/data/tomates.json");
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		this.panier = new Panier();
 		Tomate firstArticle = tomates.getTomate("Tomate Mirabelle Blanche");
@@ -33,7 +33,7 @@ public class TestMonPanier {
 		this.panier.addLigne(thirdLigne);
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 		this.panier = null;
 	}
@@ -41,17 +41,15 @@ public class TestMonPanier {
 	@Test
 	public void ajoutDeLignesDeCommande() {
 		assertEquals(3, this.panier.getContenu().size());
-		assertEquals(41.80F, this.panier.prixTTC(),0F);
-		assertEquals(41.80F + 5.5F, this.panier.prixTotal(),0F);
+		assertEquals(41.80F, this.panier.prixTTC(), 0F);
+		assertEquals(41.80F + 5.5F, this.panier.prixTotal(), 0F);
 	}
 	
 	@Test
 	public void suppressionDuneLigneDeCommande() {
 		this.panier.removeLigne(2);
 		assertEquals(2, this.panier.getContenu().size());
-		assertEquals(16.80F, this.panier.prixTTC(),0F);
-		
-		
+		assertEquals(16.80F, this.panier.prixTTC(), 0F);
 	}
 
 	@Test

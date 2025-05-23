@@ -1,17 +1,17 @@
 package tests.modele;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import adaptateur.OutilsBaseDonneesTomates;
 import modele.*;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class AppariementTomatesTest {
 	
 	private static Tomates tomates;
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUp() {
 		tomates = OutilsBaseDonneesTomates.générationBaseDeTomates("src/main/resources/data/tomates.json");
 	}
