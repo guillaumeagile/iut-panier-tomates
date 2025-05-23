@@ -35,12 +35,12 @@ public class LigneCommande {
         }
         if (quantité <= 0) {
             return Optional.empty();
-
+        }
             assert (quantité > 0);
             article.préempterQuantité(quantité);
             return Optional.of(new LigneCommande(article, quantité));
         }
-    }
+
 
     /**
      * Calcule le prix total TTC pour cette ligne de commande.

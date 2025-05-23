@@ -1,6 +1,7 @@
 package tests.useCases;
 
 import handlers.CommandHandler;
+import modele.LigneCommande;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -66,9 +67,9 @@ public class CommandHandlerTests {
 
     @Test
     public void ajouterLigneDeCommandeAvecBuild() {
-        var sut = new CommandHandler();
-        Assertions.assertEquals(10,
-                sut.consulterStock("Tomate Mirabelle Blanche"));
+        var actual = LigneCommande.Build("Tomate Mirabelle Blanche", 1);
+        Assertions.assertEquals("Tomate Mirabelle Blanche, Prix TTC : 3.95 €, quantité commandée : 1, Sous-Total : 3.95 €",
+                actual.isPresent());
     }
 
 }
