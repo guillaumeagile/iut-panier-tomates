@@ -2,6 +2,7 @@ package modele;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Optional;
 
 /**
  * Représente une ligne de commande pour un article de type Tomate.
@@ -28,9 +29,17 @@ public class LigneCommande {
     }
 
     public static Optional< LigneCommande> Build(Tomate article, int quantité) {
-        assert (quantité > 0);
-        article.préempterQuantité(this.quantité);
-        return new LigneCommande(article, quantité);
+
+        if (article == null) {
+            return Optional.empty();
+        }
+        if (quantité <= 0) {
+            return Optional.empty();
+
+            assert (quantité > 0);
+            article.préempterQuantité(quantité);
+            return Optional.of(new LigneCommande(article, quantité));
+        }
     }
 
     /**

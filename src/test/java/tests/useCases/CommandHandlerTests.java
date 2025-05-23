@@ -64,4 +64,11 @@ public class CommandHandlerTests {
 
     }
 
+    @Test
+    public void ajouterLigneDeCommandeAvecBuild() {
+        var sut = new CommandHandler();
+        Assertions.assertEquals(10,
+                sut.consulterStock("Tomate Mirabelle Blanche"));
+    }
+
 }
