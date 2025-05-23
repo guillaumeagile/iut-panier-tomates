@@ -242,6 +242,8 @@ public class Tomate {
         this.stock -= quantité;
     }
 
+
+
     /**
      * remet dans le stock une quantité.
      *

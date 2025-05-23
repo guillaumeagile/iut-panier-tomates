@@ -21,9 +21,16 @@ public class LigneCommande {
      * @assert quantité doit être supérieure à 0
      */
     public LigneCommande(Tomate article, int quantité) {
-        assert (quantité > 0);
+
         this.article = article;
         this.quantité = quantité;
+
+    }
+
+    public static Optional< LigneCommande> Build(Tomate article, int quantité) {
+        assert (quantité > 0);
+        article.préempterQuantité(this.quantité);
+        return new LigneCommande(article, quantité);
     }
 
     /**

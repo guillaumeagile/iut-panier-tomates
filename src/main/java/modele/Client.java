@@ -119,7 +119,7 @@ public class Client {
     }
 
     /**
-     * Indique si le client est abonné à la newsletter.
+     * Indique si le client est abonné à la newsletter. YAGNI !!!!
      *
      * @return true si le client est abonné, false sinon
      */

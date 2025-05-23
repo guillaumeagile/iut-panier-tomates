@@ -48,30 +48,17 @@ public class Tomates {
         this.tomates = new LinkedList<Tomate>();
     }
 
-    /**
-     * Ajoute une liste de tomates à la collection.
-     *
-     * @param tomates La liste de tomates à ajouter.
-     */
+
     public void addTomates(List<Tomate> tomates) {
         this.tomates.addAll(tomates);
     }
 
-    /**
-     * Retourne la liste des tomates.
-     *
-     * @return La liste des tomates.
-     */
+
     public List<Tomate> getTomates() {
         return this.tomates;
     }
 
-    /**
-     * Retourne une représentation sous forme de chaîne de caractères de la
-     * liste des tomates.
-     *
-     * @return Une chaîne représentant la liste des tomates.
-     */
+
     @Override
     public String toString() {
         StringBuffer res = new StringBuffer("Liste des tomates : \n\n");
